@@ -16,9 +16,7 @@
             <td>{{$p->valor}}</td>
             <td>{{$p->quantidade}}</td>
             <td>
-                <a href="/produtos/mostra/{{$p->id}}">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                </a>
+                <a href="/produtos/mostra/{{$p->id}}" class="btn btn-primary">Detalhes</a>
             </td>
         </tr>
         @endforeach
@@ -27,5 +25,7 @@
 @stop
 
 @if(old('nome'))
-Produto {{old('nome')}} adicionado com sucesso!
+    <div class="alert alert-success" role="alert">
+        Produto {{old('nome')}} adicionado com sucesso!
+    </div>
 @endif
